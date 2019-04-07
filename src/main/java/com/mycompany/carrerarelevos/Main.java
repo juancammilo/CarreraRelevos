@@ -7,7 +7,8 @@ package com.mycompany.carrerarelevos;
 
 /**
  *
- * @author Jkammilo
+ * @author JuanCamilo
+ * @author GabrielCañon
  */
 public class Main {
 

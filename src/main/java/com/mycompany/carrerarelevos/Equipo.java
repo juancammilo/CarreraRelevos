@@ -10,29 +10,54 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Jkammilo
+ * @author JuanCamilo  
+ * @author GabrielCañon
  */
 public class Equipo {
     
+    /**
+     * Variable que guarda los pasos que da el primer atleta
+     */
     private int pasosAtleta1=0;
     
+    /**
+     * Variable que guarda los pasos que da el segundo atleta
+     */
     private int pasosAtleta2=32;
     
+    /**
+     * Variable que guarda los pasos que da el tercer atleta
+     */
     private int pasosAtleta3=65;
     
-    //private int conteoPasos;
-    
+    /**
+     * Variable que guarda el nombre del equipo
+     */
     private String nombre;
     
+    /**
+     * Variable que guarda la pista donde se visualizan los atletas
+     */
     private String pista;
     
-    private static int conteo=0;
-
+    /**
+     * Variable para visualizar mejor la pista
+     */    
+    private static int conteo;
+    
+    /**
+     * Constructor que pide solo un parametro
+     * @param nombre el nombre que le van a colocar al equipo
+     */
     public Equipo( String nombre) {
         
         this.nombre = nombre;
     }
     
+    /**
+     * Metodo que recibe un parametro, y muestra en pantalla la pista 
+     * @param nombre recibe el nombre del equipo 
+     */
     public void imprimir(String nombre){
         pista = "";
         for (int i = 0; i <= 100; i++) {
@@ -57,7 +82,7 @@ public class Equipo {
             System.out.println("\n\n");
         }
         try {
-            Thread.sleep(50);
+            Thread.sleep(200);
         } catch (InterruptedException ex) {
             Logger.getLogger(Equipo.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -13,10 +13,11 @@ import java.util.concurrent.ThreadLocalRandom;
  * @author GabrielCañon
  */
 public class Utilitaria {
+    /**
+     * Metodo estatico el cual genera un numero random 
+     * @return devuelve un numero entero entre cero y tres
+     */
     public static int generarNumero(){
-        /**
-         * @parametro numero aleatorio de 0 a 3
-         */
         int numero = ThreadLocalRandom.current().nextInt(0, 3);
         return numero;
     }

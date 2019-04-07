@@ -10,27 +10,41 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Jkammilo
+ * @author JuanCamilo  
+ * @author GabrielCañon
  */
 public class Atleta extends Thread{
     
+    /**
+     * varible que guarda el nombre del equipo al que pertenece
+     */
     private Equipo equipo;
     
+    /**
+     * Variable que guarda el numero donde empieza el atleta a correr
+     */
     private int pasosInicio;
     
+    /**
+     * Variable que guarda el numero donde el atleta se detiene
+     */
     private int pasosFin;
     
-    private boolean terminar;
-    
-    //private String pista = "____________________________________________________________________________________________________";
-    
-    public Atleta(Equipo equipo, int pasosInicio, int pasosFin, boolean terminar) {
+    /**
+     * Constructor de atleta que recibe tres parametros
+     * @param equipo el nombre del equipo al que pertenece
+     * @param pasosInicio el numero del paso donde inicia el atleta
+     * @param pasosFin  el numero del paso donde termina el atleta
+     */
+    public Atleta(Equipo equipo, int pasosInicio, int pasosFin) {
         this.equipo = equipo;
         this.pasosInicio = pasosInicio;
         this.pasosFin = pasosFin;
-        this.terminar = terminar;
     }
     
+    /**
+     * Metodo donde el atleta va sumando los pasos, hasta que el ultimo atleta llegue a la meta
+     */
     @Override
     public void run(){
         if(pasosInicio==0 ){
@@ -90,7 +104,7 @@ public class Atleta extends Thread{
                                 equipo.imprimir(equipo.getNombre());
                                                                                                 
                             }while(equipo.getPasosAtleta3()< 100);
-                            System.out.println("Gano el: "+equipo.getNombre()+" con "+equipo.getPasosAtleta3()+" pasos");
+                            System.out.println("Gano el: "+equipo.getNombre());
                             System.exit(0);
                         }
                     }
@@ -123,13 +137,4 @@ public class Atleta extends Thread{
         this.pasosFin = pasosFin;
     }
 
-    public boolean isTerminar() {
-        return terminar;
-    }
-
-    public void setTerminar(boolean terminar) {
-        this.terminar = terminar;
-    }
-    
-    
 }
